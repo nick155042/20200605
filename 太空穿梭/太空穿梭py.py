@@ -1,17 +1,18 @@
 import pygame
 
-# 初始化 pyGame 引擎
+# 初始化
 pygame.init()
-# 設定 pyGame 遊戲視窗 * 標題 *
-pygame.display.set_caption("Hello pygame!")
-# 設定 pyGame 遊戲視窗 * 大小 *
-win = pygame.display.set_mode((640, 480))
+# 設置視窗標題為 太空穿梭:)
+pygame.display.set_caption('太空穿梭:)') 
+# 建立 window 視窗畫布，大小為 640x480
+window = pygame.display.set_mode((640, 480))
 game_over = False
-# 遊戲主迴圈
-while not game_over:
+bg=pygame.image.load("BG1.png")
+HJ= pygame.image.load("HJ1.png")
+while True:
     for event in pygame.event.get():
-        if (event.type == pygame.QUIT):
-            game_over = True
-# 將遊戲視窗繪製 (貼) 到螢幕上
-    pygame.display.flip()
-pygame.quit()
+        # 當使用者結束視窗，程式也結束
+        if (event.type ==  pygame. QUIT):
+            game_over=True
+        pygame.display.glip()
+pygame.quit()
